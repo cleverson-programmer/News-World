@@ -1,6 +1,7 @@
 import './style.css'
 import { useContext, useEffect } from "react";
 import { NewsContext } from "../../../context/newsContext";
+import LoadMoreButton from '../../ShowMore/LoadMoreButton';
 
 export const NewsDisplay = () => {
   const { state, dispatch } = useContext(NewsContext);
@@ -24,12 +25,13 @@ export const NewsDisplay = () => {
   if (!result) return <p>Carregando...</p>;
 
   return (
-    <div className='containerCard'>
+    <>
+      <div className="containerCard">
       {filteredNews.length > 0 ? (
-        filteredNews.map((article, index) => (
-          <div key={index} className='contentCard'>
+        filteredNews.slice(0, state.visibleNewsCount).map((article, index) => (
+          <div key={index} className="contentCard">
             <img src={article.urlToImage} alt="" />
-            <div className='textContent'>
+            <div>
               <h2>{article.title}</h2>
               <p>{article.description}</p>
             </div>
@@ -39,5 +41,7 @@ export const NewsDisplay = () => {
         <p>Não existem notícias relacionadas à sua pesquisa.</p>
       )}
     </div>
+    <LoadMoreButton /> {/* Adicione o botão Ver Mais */}
+    </>
   );
 };

@@ -1,9 +1,9 @@
-
 export const initialState = {
   selectedCategory: "top-headlines",
   searchTerm: "",
   result: null,
   filteredNews: [],
+  visibleNewsCount: 10, // Exibir inicialmente 10 notícias
 };
 
 export const newsReducer = (state, action) => {
@@ -16,6 +16,8 @@ export const newsReducer = (state, action) => {
       return { ...state, result: action.payload };
     case "SET_FILTERED_NEWS":
       return { ...state, filteredNews: action.payload };
+    case "LOAD_MORE_NEWS":
+      return { ...state, visibleNewsCount: state.visibleNewsCount + 10 }; // Incrementa em 10
     default:
       return state;
   }
