@@ -1,0 +1,37 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    width: 100%;
+    height: fit-content;
+    border: 1px solid blue;
+}
+
+.containerHeader{
+    margin: 1rem 1rem 0 1rem;
+    border: 2px solid green;
+}
+
+.contentTopComponents{
+    display: flex;
+    justify-content: space-between;
+}
+
+.contentRight{
+    display: flex;
+    gap: 5rem;
+}
+
+main{
+    width: 100%;
+    margin: 1rem 0 1rem 0;
+    overflow-x: hidden
+}
+
+.containerCardsNoticies{
+    width: 100%;
+    border: 3px solid yellow;
+}

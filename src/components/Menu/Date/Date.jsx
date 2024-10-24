@@ -1,4 +1,4 @@
-
+import './style.css'
 export const CurrentDate = () => {
     // Função para obter o dia da semana e o mês por extenso
     const getFormattedDate = () => {
@@ -23,7 +23,7 @@ export const CurrentDate = () => {
     };
   
     return (
-      <div>
+      <div className='containerDate'>
         <h1>{getFormattedDate()}</h1>
       </div>
     );

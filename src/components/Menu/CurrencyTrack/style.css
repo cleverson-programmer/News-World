@@ -1,0 +1,15 @@
+.containerCurrencyTrack{
+    display: flex;
+}
+
+.containerCurrencyTrack p{
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    text-transform: uppercase;
+    margin: 5px;
+}
+
+.containerCurrencyTrack p>span{
+    font-size: 0.8rem;
+    font-weight: 600;
+}

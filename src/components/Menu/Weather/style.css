@@ -1,0 +1,76 @@
+
+.containerWeather{
+    display: flex;
+}
+
+.containerDataWeather{
+    display: flex;
+    margin-right: 5px;
+    border: 1px solid red;
+}
+
+.containerDataWeather h2{
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.containerTemperature{
+    display: flex;
+    gap: 1rem;
+}
+
+.containerTemperature p{
+    font-weight: 600;
+}
+
+.containerImgDescription{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.containerInputWeather {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: 40px;
+    transition: width 0.3s ease;
+}
+  
+.containerInputWeather input {
+    width: 0;
+    height: min-content;
+    padding: 10px;
+    padding-right: 40px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    outline: none;
+    opacity: 0;
+    transition: width 0.3s ease, opacity 0.3s ease;
+}
+  
+.containerInputWeather:hover {
+    width: 120px;
+}
+  
+.containerInputWeather:hover input {
+    width: 100%;
+    opacity: 1;
+}
+  
+.containerInputWeather button {
+    display: flex;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+}
+  
+.containerInputWeather button:focus {
+    outline: none;
+}

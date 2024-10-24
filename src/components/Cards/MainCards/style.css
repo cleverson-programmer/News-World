@@ -1,0 +1,36 @@
+.containerCard{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Define 3 colunas */
+    grid-gap: 20px; /* Espaçamento entre os itens */
+    padding: 20px;
+}
+
+.contentCard{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ccc;
+    padding: 15px;
+    background-color: #f9f9f9;
+}
+
+.contentCard img{
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.textContent{
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+}
+
+.textContent h2 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+  
+.textContent p {
+    font-size: 14px;
+    color: #555;
+}

@@ -1,0 +1,16 @@
+
+.containerTitle{
+    display: flex;
+    width: 100%;
+    height: min-content;
+    justify-content: center;
+    border: 1px solid red;
+}
+
+.containerTitle h1{
+    font-family: 'Instrument Serif', sans-serif;
+    font-size: 3.5rem;
+    font-weight: 300;
+    font-style: italic;
+    cursor: pointer;
+}

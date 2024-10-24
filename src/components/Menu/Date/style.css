@@ -1,0 +1,14 @@
+
+.containerDate{
+    display: flex;
+    width: fit-content;
+    height: fit-content;
+    border: 2px solid orange;
+}
+
+.containerDate h1{
+    font-family: 'Instrument Serif', sans-serif;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 1.5rem;
+}
