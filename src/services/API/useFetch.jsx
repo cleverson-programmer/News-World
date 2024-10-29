@@ -26,6 +26,7 @@ export const FetchNews = ({ endpoint }) => {
       try {
         const response = await fetch(endpoint);
         const jsonResult = await response.json();
+        console.log(jsonResult)
 
         localStorage.setItem(endpoint, JSON.stringify(jsonResult));
         localStorage.setItem(`${endpoint}_timestamp`, new Date().getTime());

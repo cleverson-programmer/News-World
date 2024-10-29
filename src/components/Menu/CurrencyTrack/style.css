@@ -13,3 +13,9 @@
     font-size: 0.8rem;
     font-weight: 600;
 }
+
+@media screen and (max-width: 945px){
+    .containerCurrencyTrack p{
+        font-size: 0.8rem;
+    }
+}

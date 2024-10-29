@@ -5,7 +5,6 @@
     position: relative;
     height: min-content;
     width: 200px;
-    border: 1px solid red;
 }
 
 .containerInputSearch input{
@@ -29,4 +28,10 @@
   
 .containerInputSearch button:focus {
     outline: none;
+}
+
+@media screen and (max-width: 945px){
+    .containerInputSearch{
+        width: 160px;
+    }
 }

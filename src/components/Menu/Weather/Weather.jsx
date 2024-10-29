@@ -18,7 +18,7 @@ const WeatherComponent = () => {
 
   // Função para mapear a descrição do tempo para uma imagem
   const getWeatherImage = (description) => {
-    if (description.includes("nublado") || description.includes("nuvens dispersas")  || description.includes("algumas nuvens")) {
+    if (description.includes("nublado") || description.includes("nuvens dispersas")  || description.includes("algumas nuvens") || description.includes("névoa") ) {
       return nubladoImg;
     } else if (description.includes("sol") || description.includes("claro") || description.includes("céu limpo")){
       return ensolaradoImg;
@@ -60,6 +60,8 @@ const WeatherComponent = () => {
     } catch (err) {
       setError(err.message);
       setWeatherData(null);
+    }finally {
+      setCity(""); // Limpa o campo de entrada após a busca
     }
   };
 

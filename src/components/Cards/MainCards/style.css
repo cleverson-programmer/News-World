@@ -11,6 +11,8 @@
     border: 1px solid #ccc;
     padding: 15px;
     background-color: #f9f9f9;
+    color: black;
+    text-decoration: none;
 }
 
 .contentCard img{
@@ -33,4 +35,18 @@
 .textContent p {
     font-size: 14px;
     color: #555;
+}
+
+
+
+@media screen and (min-width: 643px) and (max-width: 945px) {
+    .containerCard {
+      grid-template-columns: repeat(2, 1fr); /* Define 2 colunas entre 643px e 945px */
+    }
+}
+
+@media screen and (max-width: 643px) {
+    .containerCard {
+      grid-template-columns: repeat(1, 1fr);
+    }
 }

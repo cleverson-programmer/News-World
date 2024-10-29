@@ -9,12 +9,11 @@ export const NewsDisplay = () => {
 
   useEffect(() => {
     if (result) {
-      // Filtrar as notícias que têm urlToImage e title válidos e correspondem ao termo de busca
+      
       const filtered = result.articles.filter((article) => {
         const hasValidTitle = article.title && article.title.toLowerCase() !== "removed";
         const hasValidImage = article.urlToImage && article.urlToImage.toLowerCase() !== "removed";
 
-        // Verifica se a notícia tem título e imagem válidos e corresponde ao termo de busca
         return hasValidTitle && hasValidImage && article.title.toLowerCase().includes(searchTerm.toLowerCase());
       });
 
@@ -29,19 +28,20 @@ export const NewsDisplay = () => {
       <div className="containerCard">
       {filteredNews.length > 0 ? (
         filteredNews.slice(0, state.visibleNewsCount).map((article, index) => (
-          <div key={index} className="contentCard">
+          <a href={article.url} target="_blank" rel="noopener noreferrer" key={index} className="contentCard">
             <img src={article.urlToImage} alt="" />
             <div>
               <h2>{article.title}</h2>
               <p>{article.description}</p>
+              
             </div>
-          </div>
+          </a>
         ))
       ) : (
         <p>Não existem notícias relacionadas à sua pesquisa.</p>
       )}
     </div>
-    <LoadMoreButton /> {/* Adicione o botão Ver Mais */}
+    <LoadMoreButton />
     </>
   );
 };
